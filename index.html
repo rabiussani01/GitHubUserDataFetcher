@@ -1,0 +1,55 @@
+<!-- =============================
+    Author Information
+============================= -->
+<!-- Title: GitHub User Data Fetcher
+     Author: Rabius Sani
+     Date: October 11, 2023
+     Description: This HTML, CSS, and JavaScript project fetches GitHub user data and displays it in a user-friendly format. It includes the user's name, followers, following, public repositories, biography, and a list of repositories with descriptions.
+     Languages: HTML, CSS, JavaScript
+     License: This code is free to use for personal projects.
+============================= -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>GitHub User Data</title>
+</head>
+<body>
+    <!-- Add the video background -->
+    <video id="video-bg" autoplay loop muted>
+        <source src="VideoBg/Pink Blue Green Gradient Color and Style Video Background.mp4" type="video/mp4">
+    </video>
+    <main class="container">
+        <div class="header">
+            <h1 class="title">GitHub User Data</h1>
+        </div>
+        <section class="input-section">
+            <label for="github-username" class="input-label">Enter a GitHub Username:</label>
+            <input type="text" id="github-username" class="input-field" placeholder="GitHub Username">
+            <button id="fetch-data" class="button primary-button">Fetch Data</button>
+            <button id="reset-data" class="button secondary-button">Reset</button>
+        </section>
+        <section id="github-data">
+            <h3 class="section-title">GitHub User Data:</h3> <hr>
+            <p><span class="data-label">Name:</span> <span id="name"></span></p>
+            <p><span class="data-label">Username:</span> <span id="username"></span></p>
+            <p><span class="data-label">Followers:</span> <span id="followers"></span></p>
+            <p><span class="data-label">Following:</span> <span id="following"></span></p>
+            <p><span class="data-label">Public Repositories:</span> <span id="public-repos"></span></p>
+            <p><span class="data-label">Biography:</span> <span id="biography"></span></p>
+        </section>
+        
+        <button id="fetch-repositories" class="button secondary-button hidden">Get Repositories</button>
+        <section id="repositories" class="hidden">
+            <h3 class="section-title">GitHub Repositories:</h3>
+            <ul id="repo-list" class="repo-list"></ul>
+        </section>
+    </main>
+    <script src="JS/script.js"></script>
+</body>
+</html>
